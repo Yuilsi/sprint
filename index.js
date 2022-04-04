@@ -4,8 +4,20 @@ const line1A_btn = document.getElementById('line1A_btn');
 const line1D_btn = document.getElementById('line1D_btn');
 const line2A_btn = document.getElementById('line2A_btn');
 const line2D_btn = document.getElementById('line2D_btn');
+const line3A_btn = document.getElementById('line3A_btn');
+const line3D_btn = document.getElementById('line3D_btn');
+const line4A_btn = document.getElementById('line4A_btn');
+const line4D_btn = document.getElementById('line4D_btn');
+const line5A_btn = document.getElementById('line4A_btn');
+const line5D_btn = document.getElementById('line5D_btn');
+
+
 const question1 = document.getElementById('question1');
 const question2 = document.getElementById('question2');
+const question3 = document.getElementById('question3');
+const question4 = document.getElementById('question4');
+const question5 = document.getElementById('question5');
+
 const order = document.getElementById('order');
 let doc = document.getElementById('csv');
 let dataBase = [];
@@ -16,7 +28,7 @@ let init;
 
 //----------------------- Carga la base de datos-------------------------------
 function setup() {
-  this.dataBase = loadStrings("./basedatos.csv");
+  this.dataBase = loadStrings("./basededatos.csv");
 }
 
 
@@ -24,10 +36,22 @@ function draw() {
   if (init) {
     question1.classList.remove('covered');
     question2.classList.remove('covered');
+    question3.classList.remove('covered');
+    question4.classList.remove('covered');
+    question5.classList.remove('covered');
+    
+
     line1A_btn.classList.remove('covered');
     line1D_btn.classList.remove('covered');
     line2D_btn.classList.remove('covered');
     line2A_btn.classList.remove('covered');
+    line3D_btn.classList.remove('covered');
+    line3A_btn.classList.remove('covered');
+    line4D_btn.classList.remove('covered');
+    line4A_btn.classList.remove('covered');
+    line5D_btn.classList.remove('covered');
+    line5A_btn.classList.remove('covered');
+
     for (let i = 0; i < this.dataBase.length; i++) {
       this.dataBaseSplited = this.dataBase[i].split(",");
       array[i] = this.dataBaseSplited;
@@ -38,7 +62,11 @@ function draw() {
       let obj = {
         Nombre: array[j][0],
        line_1: parseInt(array[j][1]),
-       line_2: parseInt(array[j][2])
+       line_2: parseInt(array[j][2]),
+       line_3: parseInt(array[j][3]),
+       line_4: parseInt(array[j][4]),
+       line_5: parseInt(array[j][5])
+
       }
       arrayData[j] = obj;
     }
