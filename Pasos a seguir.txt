@@ -1,0 +1,13 @@
+1.cargar la base de datos del excel en cvc
+2.Crear un arreglo que lea y recorra los datos
+3.Hacer que los datos se pinten en consola
+4.cren una funcion para filtrar los datos por fila
+5.crear input para cada columna 
+6.Hacer que este solo me permita selccionar dos colummnas
+7.hace una funcion que sume los valores por colummna
+8.Una funcion que compare los valores de las seleccionados
+
+8.Una función que compare los valores de dos colummnas 
+seleccionadas
+
+9.columnas que seleccione
